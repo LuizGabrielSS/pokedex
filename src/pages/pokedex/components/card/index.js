@@ -8,6 +8,7 @@ import CarrosselFunction from './components/carrossel'
 import TituloFunction from './components/titulo'
 import StatsFunction from './components/stats'
 import AbilitiesFunction from './components/abilities'
+import TypesFunction from '../../../../components/type'
 
 //Requisiçoes
 import RequisicaoInicial from './request/inicial'
@@ -79,17 +80,14 @@ function CardCarregado({Name,Foto,Tipagens,SetOpen}){
                 >
                     {
                         Tipagens.map((values) => (
+                            
                             <Box 
                             my={5}
                             mx={1}
                             >
-                                <Typography 
-                                sx={{
-                                    color:"#ff0000"
-                                }}
-                                variant="h6">
-                                    {values.type.name.toUpperCase()}
-                                </Typography>
+                                <TypesFunction
+                                Type={values.type.name.toUpperCase()}
+                                />
                             </Box>
                         ))
                     }
