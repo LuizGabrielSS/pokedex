@@ -14,7 +14,11 @@ export default function AbilitiesFunction({Habilidades}){
             p={1}
             >
                 <Typography
-                variant="h5"
+                variant={
+                    window.innerWidth > 420
+                    ? "h5"
+                    :"subtitle1"
+                }
                 sx={{
                     color:'#edad72'
                 }}
@@ -37,7 +41,11 @@ export default function AbilitiesFunction({Habilidades}){
                     }
                     >
                         <Typography
-                        variant="h5"
+                        variant={
+                            window.innerWidth > 420
+                            ? "h5"
+                            :"subtitle1"
+                        }
                         sx={{
                             color:
                             index % 2 !== 0

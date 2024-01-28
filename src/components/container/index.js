@@ -14,7 +14,9 @@ export default function ContainerFunction({Loading=false,Status=200,children}){
         <Container>
             {
                 Loading
-                ? <LoadingScreen/>
+                ? 
+                <LoadingScreen/>
+                
                 :   <>
                     {
                         Status === 200

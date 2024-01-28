@@ -9,7 +9,9 @@ import Pokedex from '../pages/pokedex'
 export default function Rotas(){
 
     return(
-        <BrowserRouter>
+        <BrowserRouter
+        basename='/pokedex'
+        >
             <Routes>
                 <Route
                 path="*"

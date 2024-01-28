@@ -13,7 +13,11 @@ export default function TituloFunction({NomePokemon}){
         }}
         >
             <Typography
-            variant="h3"
+            variant={
+                window.innerWidth > 420
+                ? "h3"
+                : "h5"
+            }
             sx={{
                 color:"#fff"
             }}

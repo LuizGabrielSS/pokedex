@@ -57,33 +57,48 @@ function CardCarregado({Name,Foto,Tipagens,SetOpen}){
         m={5}
         >
             <Box
+            sx={{
+                width: '50%', height: '50%'
+            }}
             >
                 <Avatar 
                 src={Foto}
                 alt={Name}
-                sx={{ width: 190, height: 190 }}
+                sx={{ width: '100%', height: '100%' }}
                 />
             </Box>
             <Box
+            sx={{
+                width: '50%', height: '50%'
+            }}
+            flexWrap= "wrap"
             >
                 <Typography 
+                paragraph
+                noWrap
+                display="block"
                 sx={{
                     color:"#ff0000"
                 }}
-                variant="h4">
+                variant={
+                    window.innerWidth > 420
+                    ? "h2"
+                    : "h5"
+                }>
                     {Name.toUpperCase()}
                 </Typography>
                 <Box
                 display='flex'
                 justifyContent='space-between'
                 alignItems="center"
+                flexWrap= "wrap"
                 >
                     {
                         Tipagens.map((values) => (
                             
                             <Box 
-                            my={5}
-                            mx={1}
+                            my={3}
+                            mx={2}
                             >
                                 <TypesFunction
                                 Type={values.type.name.toUpperCase()}
@@ -122,6 +137,8 @@ function PokeModal({SetOpen,Open,DadosPokemon,Loading}){
                         Imagens={DadosPokemon.sprites}
                         />
                         <Box
+                        height="50%"
+                        width="100%"
                         alignItems="center"
                         >
                         <TituloFunction
@@ -140,15 +157,12 @@ function PokeModal({SetOpen,Open,DadosPokemon,Loading}){
                         </Box>
                     </Box>
                     <Box
-                    
-                    
                     >
                         <AbilitiesFunction
                         Habilidades={DadosPokemon.abilities}
                         />
                     </Box>
-                </Box>
-                
+                </Box>    
         }   
         </ModalDefault>
     )
@@ -162,6 +176,8 @@ export default function CardFunction({Pokemon}){
     const[DadosPokemon,SetDadosPokemon] = useState([])
 
     const[Open,SetOpen] = useState(false)
+
+    const ColorsType = ['#ff0000','#fff']
 
     useEffect(() => {
         RequisicaoInicial(SetLoading,SetDadosPokemon,Pokemon.name)
@@ -182,7 +198,7 @@ export default function CardFunction({Pokemon}){
             borderColor: 'error.main',
             borderRadius:10,
             padding:0,
-            background: 'linear-gradient(to right,red 0%,pink 50%,white 50%,white 100%)'
+            background: `linear-gradient(to right,${ColorsType[0]} 0%,color-mix(in srgb ,${ColorsType[0]},${ColorsType[1]}) 50%,${ColorsType[1]} 50%,${ColorsType[1]} 100%)`
         }}
         >
             {

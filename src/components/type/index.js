@@ -20,10 +20,17 @@ function TypeComponent({Icone,Tipagem,Color}){
         >
             <Icone
             style={{
-                color:Color
+                color:Color,
+                 width: '20%', height: '20%'
             }}
             />
             <Typography
+
+            variant={
+                    window.innerWidth > 420
+                    ? "h5"
+                    : "subtitle1"
+                }
             sx={{
                 color:Color
             }}
@@ -36,7 +43,12 @@ function TypeComponent({Icone,Tipagem,Color}){
 
 export default function TypesFunction({Type}){
 
+    // // function CorTipo(NovaCor){
+    //     SetCorTipagem([...CorTipagem,NovaCor])
+    // }
+
     if(Type === 'NORMAL'){
+        // CorTipo("#999966")
         return(
             <TypeComponent
             Icone={RiEmotionNormalLine}
@@ -45,6 +57,7 @@ export default function TypesFunction({Type}){
             />
         )
     }else if(Type === 'FIGHTING'){
+        // CorTipo("#993300")
         return(
             <TypeComponent
             Icone={LuSword}
@@ -53,6 +66,7 @@ export default function TypesFunction({Type}){
             />
         )
     }else if(Type === 'POISON'){
+        // CorTipo("#9d00ff")
         return(
             <TypeComponent
             Icone={GiPoisonBottle}
@@ -61,6 +75,7 @@ export default function TypesFunction({Type}){
             />
         )
     }else if(Type === 'GROUND'){
+        // CorTipo("#ff8000")
         return(
             <TypeComponent
             Icone={GiUndergroundCave}
@@ -70,6 +85,7 @@ export default function TypesFunction({Type}){
         )
         
     }else if(Type === 'ROCK'){
+        // CorTipo("#663300")
         return(
             <TypeComponent
             Icone={GiStoneSphere}
@@ -78,6 +94,7 @@ export default function TypesFunction({Type}){
             />
         )
     }else if(Type === 'BUG'){
+        // CorTipo("#336600")
         return(
             <TypeComponent
             Icone={FaBug}
@@ -86,6 +103,7 @@ export default function TypesFunction({Type}){
             />
         )
     }else if(Type === 'STEEL'){
+        // CorTipo("#c0c0c0")
         return(
             <TypeComponent
             Icone={GiSteelClaws}
@@ -94,6 +112,7 @@ export default function TypesFunction({Type}){
             />
         )
     }else if(Type === 'FIRE'){
+        // CorTipo("#ff0000")
         return(
             <TypeComponent
             Icone={FaFire}
@@ -102,6 +121,7 @@ export default function TypesFunction({Type}){
             />
         )
     }else if(Type === 'WATER'){
+        // CorTipo("#0000ff")
         return(
             <TypeComponent
             Icone={IoWaterOutline}
@@ -110,6 +130,7 @@ export default function TypesFunction({Type}){
             />
         )
     }else if(Type === 'GRASS'){
+        // CorTipo("#00ff00")
         return(
             <TypeComponent
             Icone={IoLeafSharp}
@@ -118,6 +139,7 @@ export default function TypesFunction({Type}){
             />
         )        
     }else if(Type === 'PSYCHIC'){
+        // CorTipo("#ff66ff")
         return(
             <TypeComponent
             Icone={MdOutlinePsychology}
@@ -126,6 +148,7 @@ export default function TypesFunction({Type}){
             />
         ) 
     }else if(Type === 'ICE'){
+        // CorTipo("#66ccff")
         return(
             <TypeComponent
             Icone={FaRegSnowflake}
@@ -134,6 +157,7 @@ export default function TypesFunction({Type}){
             />
         )
     }else if(Type === 'DRAGON'){
+        // CorTipo("#333399")
         return(
             <TypeComponent
             Icone={FaDragon}
@@ -142,6 +166,7 @@ export default function TypesFunction({Type}){
             />
         )        
     }else if(Type === 'DARK'){
+        // CorTipo("#000033")
         return(
             <TypeComponent
             Icone={MdDarkMode}
@@ -150,6 +175,7 @@ export default function TypesFunction({Type}){
             />
         )
     }else if(Type === 'FAIRY'){
+        // CorTipo("#ff00ff")
         return(
             <TypeComponent
             Icone={GiFairyWand}
@@ -159,6 +185,7 @@ export default function TypesFunction({Type}){
         )
         
     }else if(Type === 'UNKNOWN'){
+        // CorTipo("#808080")
         return(
             <TypeComponent
             Icone={GrStatusUnknown}
@@ -168,6 +195,7 @@ export default function TypesFunction({Type}){
         )
         
     }else if(Type === 'SHADOW'){
+        // CorTipo("#1a1a1a")
         return(
             <TypeComponent
             Icone={SiShadow}
@@ -177,6 +205,7 @@ export default function TypesFunction({Type}){
         )
         
     }else if(Type === 'FLYING'){
+        // CorTipo("#99ebff")
         return(
             <TypeComponent
             Icone={GiAngelWings}
@@ -186,6 +215,7 @@ export default function TypesFunction({Type}){
         )
         
     }else if(Type === 'GHOST'){
+        // CorTipo("#666699")
         return(
             <TypeComponent
             Icone={FaGhost}
@@ -195,13 +225,13 @@ export default function TypesFunction({Type}){
         )
         
     }else if(Type === 'ELECTRIC'){
+        // CorTipo("#ffff00")
         return(
             <TypeComponent
             Icone={FaBolt}
-            Tipagem='Planta'
+            Tipagem='Eletrico'
             Color="#ffff00"
             />
         ) 
     }
-
 }

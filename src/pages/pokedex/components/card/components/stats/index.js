@@ -32,6 +32,14 @@ function StatsComponent({IconePrimeiro,IconeSegundo,InfoPrimeiro,InfoSegundo,Des
                 
                 <IconePrimeiro
                 sx={{
+                    width:
+                    window.innerWidth > 420
+                        ?'10%'
+                        : '50%', 
+                    height: 
+                    window.innerWidth > 420
+                    ?'10%'
+                    : '50%', 
                     color:
                     Inverso 
                     ? '#edad72'
@@ -40,7 +48,11 @@ function StatsComponent({IconePrimeiro,IconeSegundo,InfoPrimeiro,InfoSegundo,Des
                 />
                 
                     <Typography
-                        variant="h6"
+                        variant={
+                            window.innerWidth > 420
+                            ? "h6"
+                            :"caption"
+                        }
                         sx={{
                             color:
                             Inverso 
@@ -62,6 +74,14 @@ function StatsComponent({IconePrimeiro,IconeSegundo,InfoPrimeiro,InfoSegundo,Des
             >
                 <IconeSegundo
                 sx={{
+                    width:
+                    window.innerWidth > 420
+                        ?'10%'
+                        : '50%', 
+                    height: 
+                    window.innerWidth > 420
+                    ?'10%'
+                    : '50%', 
                     color:
                     Inverso 
                     ? '#edad72'
@@ -70,7 +90,11 @@ function StatsComponent({IconePrimeiro,IconeSegundo,InfoPrimeiro,InfoSegundo,Des
                 />
                 
                     <Typography
-                        variant="h6"
+                        variant={
+                            window.innerWidth > 420
+                            ? "h6"
+                            :"caption"
+                        }
                         sx={{
                             color:
                             Inverso 

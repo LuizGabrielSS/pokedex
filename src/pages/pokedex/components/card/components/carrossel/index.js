@@ -17,7 +17,7 @@ export default function CarrosselFunction({Imagens}){
 
         const posicao = array_imagens.indexOf(FotoAtual)
 
-        console.log(FotoAtual)
+        // console.log(FotoAtual)
 
         if(Direcao === "menor"){
         
@@ -52,7 +52,7 @@ export default function CarrosselFunction({Imagens}){
         alignSelf='center'
         display='flex'
         m={2}
-        p={5}
+        p={2}
         >
             <Box
             width="100%"
